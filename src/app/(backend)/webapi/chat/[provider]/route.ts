@@ -8,9 +8,7 @@ import { type ChatStreamPayload } from '@/types/openai/chat';
 import { createErrorResponse } from '@/utils/errorResponse';
 import { getTracePayload } from '@/utils/trace';
 
-// If user don't use fluid compute, will build  failed
-// this enforce user to enable fluid compute
-export const maxDuration = 300;
+export const maxDuration = 60;
 
 export const POST = checkAuth(
   async (req: Request, { params, userId, serverDB, createRuntime, jwtPayload }) => {
