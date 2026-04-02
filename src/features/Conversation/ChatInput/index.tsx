@@ -201,6 +201,7 @@ const ChatInput = memo<ChatInputProps>(
 
     return (
       <ChatInputProvider
+        key={agentId}
         agentId={agentId}
         allowExpand={allowExpand}
         leftActions={leftActions}
